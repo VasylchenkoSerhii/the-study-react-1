@@ -1,16 +1,17 @@
 import { shape, number } from 'prop-types';
+import css from './ProfileStats.module.css';
 
 const ProfileStats = ({ stats }) => {
     let markup = [];
     for (let key in stats) {
         markup.push(
                     <li key={key}>
-                        <span className="label">{ key }</span>
-                        <span className="quantity">{stats[key]}</span>
+                        <span className={css.label}>{ key }</span>
+                        <span className={css.quantity}>{stats[key]}</span>
                     </li>) 
     };
     return (
-        <ul className="stats">{markup}</ul>
+        <ul className={`${css.stats} ${css.list}`}>{markup}</ul>
     );
 };
 

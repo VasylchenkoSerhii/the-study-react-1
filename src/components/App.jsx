@@ -9,11 +9,11 @@ import transactions from "../data/transactions"
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Profile dataUser={user}/>
       <Statistic title={'Upload stats'} stats={statisticData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions}/>
-    </div>
+    </>
   );
 };

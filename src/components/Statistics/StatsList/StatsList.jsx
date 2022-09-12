@@ -1,8 +1,9 @@
 import StatsItem from "./StatsItem/StatsItem";
+import css from "./StatsList.module.css";
 
 const StatsList = ({ data }) => {
     return (
-        <ul className="stat-list"><StatsItem data={data} /></ul>
+        <ul className={`${css.statList} ${css.list}`}><StatsItem data={data} /></ul>
     );
 };
 
