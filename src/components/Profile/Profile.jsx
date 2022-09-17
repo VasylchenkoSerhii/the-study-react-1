@@ -1,15 +1,12 @@
 import ProfileStats from './ProfileStats/ProfileStats';
 import { string, shape } from 'prop-types';
-import css from './Profile.module.css';
 import { number } from 'prop-types';
 import { Box } from 'components/Box/Box';
+import { Avatar, Name, Tag, Location } from './Profile.styled';
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
     return (
-        <Box
-            mb={5}
-            as='section'
-        >
+        <Box mb={5} as='section'>
             <Box
                 maxWidth={400}
                 mr='auto'
@@ -18,17 +15,16 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
                 fontSize='m'
                 color='text'
             >
-                <div className="description">
-                    <img
-                    src={avatar}
-                    alt="User avatar"
-                    className={css.avatar}
-                    width="250"
-                    height="300"
-                    />
-                <p className={css.name}>{name}</p>
-                    <p className={css.tag}>@{tag}</p>
-                <p className={css.location}>{location}</p>
+            <div className="description">
+                <Avatar
+                src={avatar}
+                alt="User avatar"
+                width="250"
+                height="300"
+                />
+                <Name>{name}</Name>
+                    <Tag>@{tag}</Tag>
+                <Location>{location}</Location>
             </div>
            
                 <ProfileStats stats={stats}/>

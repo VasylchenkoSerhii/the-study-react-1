@@ -1,17 +1,32 @@
 import { shape, number } from 'prop-types';
-import css from './ProfileStats.module.css';
+import { Box } from 'components/Box/Box';
+import { Label, Uantity } from './ProfileStats.styled';
 
 const ProfileStats = ({ stats }) => {
     let markup = [];
     for (let key in stats) {
         markup.push(
-                    <li key={key}>
-                        <span className={css.label}>{ key }</span>
-                        <span className={css.quantity}>{stats[key]}</span>
-                    </li>) 
+            <Box
+                as='li'
+                key={key}
+                flexBasis={120}
+                p={3}
+                border='normal'
+                borderColor='border'
+            >
+                <Label>{ key }</Label>
+                <Uantity>{stats[key]}</Uantity>
+            </Box>) 
     };
     return (
-        <ul className={`${css.stats} ${css.list}`}>{markup}</ul>
+        <Box
+            as='ul'
+            display='flex'
+            justifyContent='space-around'
+            bg='backgroundStats'
+        >
+            {markup}
+        </Box>
     );
 };
 
