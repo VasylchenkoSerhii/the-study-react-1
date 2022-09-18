@@ -1,7 +1,7 @@
 import TransactionHistoryItem from "./TransactionHistoryItem/TransactionHistoryItem";
 import { string, shape, arrayOf, } from 'prop-types';
 import { Box } from "components/Box/Box";
-import { Table, TableHead } from "./TransactionHistory.styled";
+import { Table } from "./TransactionHistory.styled";
 
 const TransactionHistory = ({ items }) => {
     return (
