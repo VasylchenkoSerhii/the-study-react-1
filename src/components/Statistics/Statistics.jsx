@@ -1,5 +1,5 @@
 import StatsList from "./StatsList/StatsList";
-import { string, shape, arrayOf } from 'prop-types';
+import { string, shape, arrayOf, number } from 'prop-types';
 import { Box } from "components/Box/Box";
 import { Title } from "./Statics.styled";
 
@@ -32,7 +32,7 @@ Statistic.propTypes = {
     stats: arrayOf(shape({
         id: string.isRequired,
         label: string.isRequired,
-        percentage: string.isRequired
+        percentage: number.isRequired,
     })).isRequired
 };
 

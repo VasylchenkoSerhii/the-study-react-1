@@ -1,12 +1,13 @@
 import { string, arrayOf, shape, number } from "prop-types";
 import { Box } from "components/Box/Box";
 import { Label } from "./StatsItem.styled";
+import { getRandomHexColor } from "utils/randomHexColor/randomHexsColor";
 
 const StatsItem = ({ data }) => {
    return data.map(({ id, label, percentage }) => (
-        <Box as='li' p={3} flexBasis={84} key={id}>
+        <Box as='li' color='black' p={3} flexBasis={84} bg={getRandomHexColor()} key={id}>
             <Label>{label}</Label>
-            <span className="percentage">{percentage}</span>
+            <span>{percentage}%</span>
         </Box>
     ));
 };

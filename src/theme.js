@@ -2,6 +2,8 @@ export const theme = {
   colors: {
     black: '#000',
     white: '#fff',
+    green: '#00ff00',
+    red: '#ff0000',
     text: 'rgb(55, 56, 56)',
     backgroundStats: 'rgb(221, 221, 213)',
     border: 'rgb(141, 139, 139)',
@@ -34,6 +36,7 @@ export const theme = {
   borders: {
     none: 'none',
     normal: '1px solid',
+    bold: '2px solid',
   },
   radii: {
     none: '0',

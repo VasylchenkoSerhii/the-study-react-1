@@ -1,13 +1,14 @@
 import { string, number, shape, bool, arrayOf } from 'prop-types';
+import { Frend, Status, Image } from './FrendListItem.styled';
 
 const FriendListItem = ({ friends }) => {
     return (
         friends.map(({ id, avatar, name, isOnline }) => (
-            <li key={id} className="item">
-                <span data-status={isOnline} className="status"></span>
-                <img className="avatar" src={avatar} alt="User avatar" width="48" />
+            <Frend key={id}>
+                <Status isOnline={isOnline}></Status>
+                <Image src={avatar} alt="User avatar" height="48" />
                 <p className="name">{name}</p>
-            </li>
+            </Frend>
         ))
     )
 };

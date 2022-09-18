@@ -6,9 +6,9 @@ import { Avatar, Name, Tag, Location } from './Profile.styled';
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
     return (
-        <Box mb={5} as='section'>
+        <Box mb={5} pt={3} as='section'>
             <Box
-                maxWidth={400}
+                maxWidth={399}
                 mr='auto'
                 ml='auto'
                 textAlign='center'
